@@ -1,0 +1,11 @@
+{
+    "search.exclude": {
+        "": true
+    },
+    "search.useIgnoreFiles": false,
+    "workbench.colorTheme": "Community Material Theme Ocean",
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    }
+}

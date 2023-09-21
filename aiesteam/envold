@@ -1,0 +1,12 @@
+PORT=3000
+HOST= census-poc-aurora-dev.cluster-ro-cjflqg3bd6i9.us-gov-east-1.rds.amazonaws.com
+PASSWORD= "password1"
+DBUSER=knick
+DBPORT=5432
+DATABASE=census_poc
+DIALECT=postgres
+HOSTURL=http://localhost:3000/
+AYX_KEY=8DA75962DC81D0B932d3f4d0ce406da9c4432e0450287787e23af14
+AYX_SECRET=6e0b2f28741e37e1327777710e31000479f8d22b12c22242b0c98d463a128394
+AYX_APP_ID=62c87c248751a82d3c9d2448
+AYX_API_LOC=http://20.185.197.49:80/gallery/api

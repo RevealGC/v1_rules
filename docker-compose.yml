@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  controller:
+    # image: controller:latest
+    build: ./aiesteam
+    container_name: controller
+    restart: always
+    env_file:
+      - ./aiesteam/.env
+    ports:
+      - 8000:80
+    volumes:
+      - ./aiesteam:/src
+      - node_modules_controller:/src/node_modules
+    
+
+  ui:
+    # image: ui:latest
+    build: ./json-rule-editor
+    container_name: ui
+    restart: always
+    ports:
+      - 3000:3000
+    depends_on:
+      - controller
+    volumes:
+      - ./json-rule-editor:/app
+      - node_modules_ui:/app/node_modules
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+networks:
+  default:
+
+volumes:
+  json-rule-editor:
+  aiesteam:
+  node_modules_ui:
+  node_modules_controller:
